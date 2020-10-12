@@ -30,6 +30,7 @@ function HomeContainer({ LoadingComponent }) {
 
   return (
     <>
+      <h1>TESTING HOME</h1>
       {authState.isAuthenticated && !userInfo && (
         <LoadingComponent message="Fetching user profile..." />
       )}
