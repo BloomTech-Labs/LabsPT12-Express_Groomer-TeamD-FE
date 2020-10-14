@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import './nav-styles.scss';
+import Logo from '../../assets/logo.png';
 
 import {
   MailOutlined,
@@ -28,6 +29,7 @@ class NavBar extends React.Component {
         selectedKeys={[current]}
         mode="horizontal"
       >
+        <img className="logo" src={Logo} />
         <Menu.Item key="mail">About</Menu.Item>
         <Menu.Item key="app">Testimonial</Menu.Item>
 

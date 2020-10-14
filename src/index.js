@@ -13,6 +13,7 @@ import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { ExampleListPage } from './components/pages/ExampleList';
 import { Nav } from './components/Nav';
+import { Hero } from './components/Header';
 import { HomePage } from './components/pages/Home';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
@@ -42,6 +43,7 @@ function App() {
   return (
     <Security {...config} onAuthRequired={authHandler}>
       <Nav />
+      <Hero />
       <Switch>
         <Route path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
