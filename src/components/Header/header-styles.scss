@@ -1,0 +1,29 @@
+.hero {
+  width: 100%;
+  position: relative;
+}
+
+.search-container {
+  position: absolute;
+  top: 35%;
+  width: 30vw;
+  margin: 8%;
+}
+
+.hero-headline {
+  position: absolute;
+  top: 5%;
+  font-family: 'Source Sans Pro', sans-serif, 0, 900;
+  font-size: 5vw;
+  margin: 8%;
+}
+
+.ant-btn.ant-btn-primary.ant-btn-lg.ant-input-search-button {
+  background-color: blue;
+  border-color: blue;
+}
+
+// .ant-input.ant-input-lg {
+//   position: absolute;
+//   top: 30%;
+// }
