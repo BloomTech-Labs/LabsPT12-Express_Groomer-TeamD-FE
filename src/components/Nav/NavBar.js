@@ -1,52 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'antd';
 import './nav-styles.scss';
 import Logo from '../../assets/logo.png';
 
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  //   SettingOutlined,
-} from '@ant-design/icons';
+const NavBar = () => {
+  const [current, setCurrent] = useState('');
 
-// const { SubMenu } = Menu;
-
-class NavBar extends React.Component {
-  state = {
-    current: 'mail',
-  };
-
-  handleClick = e => {
+  const handleClick = e => {
     console.log('click ', e);
-    this.setState({ current: e.key });
+    setCurrent({ current: e.key });
   };
 
-  render() {
-    const { current } = this.state;
-    return (
-      <Menu
-        onClick={this.handleClick}
-        selectedKeys={[current]}
-        mode="horizontal"
-      >
-        <img className="logo" src={Logo} />
-        <Menu.Item key="mail">About</Menu.Item>
-        <Menu.Item key="app">Testimonial</Menu.Item>
+  return (
+    <Menu onClick={handleClick} selectedKeys={current} mode="horizontal">
+      <img className="logo" src={Logo} alt="groomer logo" />
+      <Menu.Item key="about">About</Menu.Item>
+      <Menu.Item key="testimonial">Testimonial</Menu.Item>
 
-        <Menu.Item key="alipay">
-          <a
-            href="https://ant.design"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Login
-          </a>
-        </Menu.Item>
-      </Menu>
-    );
-  }
-}
-
-// ReactDOM.render(<NavBar />, mountNode);
+      <Menu.Item key="alipay">
+        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+          Login
+        </a>
+      </Menu.Item>
+    </Menu>
+  );
+};
 
 export default NavBar;
