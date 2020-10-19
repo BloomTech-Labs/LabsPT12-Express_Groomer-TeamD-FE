@@ -7,7 +7,7 @@ function SearchBar() {
   return (
     <div className="search-container">
       <Search
-        placeholder="input search text"
+        placeholder="Search for Groomer"
         onSearch={value => console.log(value)}
         enterButton
       />
