@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer-styles.scss';
 import logoRev from '../../assets/logoRev.png';
+import { Modal } from 'antd';
+import { LoginPage } from '../pages/Login';
 
 function Footer() {
+  const [visible, setVisible] = useState(false);
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = e => {
+    console.log(e);
+    setVisible(false);
+  };
+
+  const handleCancel = e => {
+    console.log(e);
+    setVisible({
+      visible: false,
+    });
+  };
+
   return (
     <div className="footerContainer">
       <div className="footerSection1">
@@ -15,9 +35,8 @@ function Footer() {
         <img className="logoRev" src={logoRev} alt="logoRev" />
       </div>
       <div className="footerSection3">
-        <a href="url">about</a>
-        <a href="url">testimonials</a>
-        <a href="url">login</a>
+        <a href="#about">About</a> |<a href="#testimonial">Testimonials</a> |
+        <p onClick={showModal}>Login</p>
       </div>
       <div className="mobileFooter">
         <div className="mobileSection1">
@@ -27,13 +46,17 @@ function Footer() {
           <i className="fab fa-youtube-square"></i>
         </div>
         <div className="mobileSection2">
-          <a href="url">about</a> |<a href="url">testimonials</a> |
-          <a href="url">login</a>
+          <a href="#about">About</a> |<a href="#testimonial">Testimonials</a> |
+          <p onClick={showModal}>Login</p>
         </div>
         <div className="mobileSection3">
           <img className="logoRev" src={logoRev} alt="logoRev" />
         </div>
       </div>
+
+      <Modal visible={visible} onOk={handleOk} onCancel={handleCancel}>
+        <LoginPage />
+      </Modal>
     </div>
   );
 }

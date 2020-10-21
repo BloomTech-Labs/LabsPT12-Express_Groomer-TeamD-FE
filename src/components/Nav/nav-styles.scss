@@ -18,12 +18,26 @@
     top: 7%;
 
     a {
-      margin: 0% 5%;
+      font-size: 1rem;
+      margin: 0% 3%;
+      color: #3a3a3a;
+      border: 2px solid white;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0% 3%;
       color: #3a3a3a;
       border: 2px solid white;
     }
     a:hover {
       border-bottom: 2px solid #ba3c15;
     }
+    p:hover {
+      border-bottom: 2px solid #ba3c15;
+    }
   }
+}
+
+.sign-in-widget {
+  margin-top: -20%;
 }
