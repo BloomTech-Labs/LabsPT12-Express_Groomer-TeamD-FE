@@ -27,15 +27,15 @@
 
 - Fork and clone the repo to install it as your own remote.
   - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
-- run: `npm install` to download all dependencies.
-- run: `npm start` to start your local development server.
+- run: `yarn install` to download all dependencies.
+- run: `yarn run start` to start your local development server.
 
 > When using Okta for authentication, the app will need to run locally on port 3000.
 
 ## Errors on Deploy
 
-- Are you seeing an error on `npm start` that looks something like this?
-  ![npm start fail](https://tk-assets.lambdaschool.com/e1b1f8c9-612d-4744-b413-36ebf29f0337_image4.png)
+- Are you seeing an error on `yarn run start` that looks something like this?
+  ![yarn start fail](https://tk-assets.lambdaschool.com/e1b1f8c9-612d-4744-b413-36ebf29f0337_image4.png)
 
 - Head over to the `package.json` file and please modify your scripts in order to allocate more memory for the 'craco' package. More information on 'craco' and why we use it [can be found here](https://github.com/gsoft-inc/craco).
 

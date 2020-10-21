@@ -12,9 +12,7 @@ import 'antd/dist/antd.less';
 
 import { NotFoundPage } from './components/pages/NotFound';
 import { ExampleListPage } from './components/pages/ExampleList';
-import { Nav } from './components/Nav';
-import { Hero, SearchBar } from './components/Header';
-import { About, Footer, Testimonials } from './components/Home-Sections';
+import { LandingPage } from './components/pages/Landing';
 import { HomePage } from './components/pages/Home';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
@@ -43,14 +41,8 @@ function App() {
 
   return (
     <Security {...config} onAuthRequired={authHandler}>
-      <Nav />
-      <Hero />
-      <SearchBar />
-      <About />
-      <Testimonials />
-      <Footer />
       <Switch>
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}

@@ -1,19 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Nav } from '../../Nav';
+import { Hero, SearchBar } from '../../Header';
+import { About, Footer, Testimonials } from '../../Home-Sections';
 
-function RenderLandingPage(props) {
+function RenderLandingPage() {
   return (
     <div>
-      <h1>Welcome to Labs Basic SPA</h1>
-      <div>
-        <p>
-          This is an example of how we'd like for you to approach page/routable
-          components.
-        </p>
-        <p>
-          <Link to="/example-list">Example List of Items</Link>
-        </p>
-      </div>
+      <Nav />
+      <Hero />
+      <SearchBar />
+      <About />
+      <Testimonials />
+      <Footer />
     </div>
   );
 }

@@ -6,10 +6,10 @@ function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerSection1">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-youtube-square"></i>
+        <i className="fab fa-facebook-square"></i>
+        <i className="fab fa-instagram"></i>
+        <i className="fab fa-twitter"></i>
+        <i className="fab fa-youtube-square"></i>
       </div>
       <div className="footerSection2">
         <img className="logoRev" src={logoRev} alt="logoRev" />
@@ -21,10 +21,10 @@ function Footer() {
       </div>
       <div className="mobileFooter">
         <div className="mobileSection1">
-          <i class="fab fa-facebook-square"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-youtube-square"></i>
+          <i className="fab fa-facebook-square"></i>
+          <i className="fab fa-instagram"></i>
+          <i className="fab fa-twitter"></i>
+          <i className="fab fa-youtube-square"></i>
         </div>
         <div className="mobileSection2">
           <a href="url">about</a> |<a href="url">testimonials</a> |
