@@ -1,28 +1,18 @@
-import React, { useState } from 'react';
-import { Menu } from 'antd';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './nav-styles.scss';
 import Logo from '../../assets/logo.png';
 
 const NavBar = () => {
-  const [current, setCurrent] = useState('');
-
-  const handleClick = e => {
-    console.log('click ', e);
-    setCurrent({ current: e.key });
-  };
-
   return (
-    <Menu onClick={handleClick} selectedKeys={current} mode="horizontal">
-      <img className="logo" src={Logo} alt="groomer logo" />
-      <Menu.Item key="about">About</Menu.Item>
-      <Menu.Item key="testimonial">Testimonial</Menu.Item>
-
-      <Menu.Item key="alipay">
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-          Login
-        </a>
-      </Menu.Item>
-    </Menu>
+    <div className="nav-container">
+      <img src={Logo} alt="groom-logo" className="logo" />
+      <div className="nav-links">
+        <a href="#about">About</a>
+        <a href="#testimonial">Testimonial</a>
+        <Link to="/login">Login</Link>
+      </div>
+    </div>
   );
 };
 

@@ -19,7 +19,7 @@ export default class Testimonials extends Component {
         autoPlay={true}
         interval={6100}
       >
-        <div>
+        <div id="testimonial">
           <img className="person" src={Woman1} alt="cute person" />
           <div className="myCarousel">
             <h3>Shirley Fultz</h3>

@@ -6,7 +6,7 @@ import icon3 from '../../assets/icon3.png';
 
 function About() {
   return (
-    <div className="aboutContainer">
+    <div className="aboutContainer" id="about">
       <div className="aboutCard">
         <img className="icon" src={icon1} alt="icon1" />
         <h1>Search for a Groomer</h1>
