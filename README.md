@@ -1,19 +1,31 @@
-# express-groomer
-
-- Welcome to your `Basic Single Page Application Repository`. Use this to start your own Greenfield Project using ReactJS and common industry standards.
-
-- This repository assumes a handful of industry practices and standards. We strive to keep you on the bleeding edge of the industry and as a result, we have made some opinions for you so that you don't have to; you're welcome.
-
-- The following was built using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) for base boiler-plating. We will maintain the dependencies as according to their specifications as an Engineering Organization.
-
-## StoryBook
-
-- All of the reusable components for this repository can be [found here using a Storybook](https://lambda-school-labs.github.io/labs-spa-starter/?path=/story/form-button--basic-usage).
-- For more information on contributing to our Storybook for this application [you can see here](./src/stories/README.md).
+# Express Groomer
+\
+[Homepage](https://main.d3jas6g6byv0f1.amplifyapp.com/)
+\
+Demonstrating mastery over:
+\
+* HTML
+* Box Model/Flexbox
+* Advanced CSS/LESS
+* JavaScript
+* Objects, Components, Arrays
+* DOM Manipulation, Event Listeners
+* Git Flow
+* Responsive Design
+* Collaborative Production
+By building a React web app for Express Groomer
+\
+## Developers
+\
+Candace Wilson/ [Github](https://github.com/candaceyw)
+Sheila Moore/ [Github](https://github.com/sherexmykes)
+Angela Williams/ [Github](https://www.github.com/techgawd)
+Anthony Hernandez/ [Github](https://github.com/asvka/)
+Fnu Milat/ [Github](https://github.com/fnumilat)
 
 ## Requirements
 
-- [Labs Engineering Standard requirements found here](https://labs.lambdaschool.com/topics/node-js/)
+- [Labs Engineering Standard requirements found here](https://docs.labs.lambdaschool.com/home/)
 
 ## Getting Started
 
@@ -27,56 +39,10 @@
 
 - Fork and clone the repo to install it as your own remote.
   - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
-- run: `yarn install` to download all dependencies.
-- run: `yarn run start` to start your local development server.
+- run: `npm install` to download all dependencies.
+- run: `npm start` to start your local development server.
 
 > When using Okta for authentication, the app will need to run locally on port 3000.
-
-## Errors on Deploy
-
-- Are you seeing an error on `yarn run start` that looks something like this?
-  ![yarn start fail](https://tk-assets.lambdaschool.com/e1b1f8c9-612d-4744-b413-36ebf29f0337_image4.png)
-
-- Head over to the `package.json` file and please modify your scripts in order to allocate more memory for the 'craco' package. More information on 'craco' and why we use it [can be found here](https://github.com/gsoft-inc/craco).
-
-```js
-"start": "craco --max_old_space_size=4096 start",
-"build": "craco --max_old_space_size=4096 build",
-```
-
-## Deploying Your App
-
-- Your front end is to be deployed using [AWS amplify](https://aws.amazon.com/amplify/). You can find a step-by-step deployment guide [here](./DEPLOYMENT_GUIDE.md).
-- Your engineering manager will ensure that you have the credentials you need to get your app deployed.
-
-## Components
-
-- We feel that you shouldn't have to spend time as a developer worrying about where your files should go and your architectural decisions that you'd have to make if you started from scratch.
-- Following the patterns we've laid out for your and the definitions of 'components' will help you focus on getting work done, rather than spending time deliberating on 'how' your work will get done.
-- Please see [the following documentation](./src/components/README.md) on how to work with and structure your components in this app.
-
-## Styling Your App
-
-- In order to provide an experience for you to dive right into a code base and have everything you need to successfully style and craft your UI Components we'd like for you to gain some practice using the [`ANT Design Library`](https://ant.design/).
-
-- Instructions on how to use components can be found in the `notes` portion in the [project storybook](https://lambda-school-labs.github.io/labs-spa-starter/?path=/info/form--example-form).
-
-- It is recommended that you use the [AntD components](https://ant.design/components/overview/) as your common components.
-
-### Theme-ing your app
-
-- Even though you're using Ant Design and the global stylesheet that comes with it, you can control the theme of your application by changing things like font-family, sizes, border-radius', primary/accent colors etc.
-
-- To do this, simply go to the `theme-overrides.js` file and use the[ following properties to override the styles](https://ant.design/docs/react/customize-theme)
-
-- **You will need to restart your app completely restart your dev server when making changes to this JS file**
-
-## Testing your App.
-
-- In accordance with our [Labs Engineering Standards](https://labs.lambdaschool.com/) this app uses common practices for Unit/Integration Testing using:
-  [React Testing Library](https://github.com/testing-library/react-testing-library)
-  [Jest](https://jestjs.io/)
-- For examples on how to test your application and more information please see [the following documentation](./src/__tests__/README.md).
 
 ## Contributing
 
