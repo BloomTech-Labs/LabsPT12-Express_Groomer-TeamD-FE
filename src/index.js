@@ -16,6 +16,7 @@ import { LandingPage } from './components/pages/Landing';
 import { HomePage } from './components/pages/Home';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
+import { Dashboard } from './components/userDash/index';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 
@@ -43,6 +44,7 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
         <Route exact path="/" component={LandingPage} />
+        <Route exact path="/userDash" component={Dashboard} />
         <Route path="/login" component={LoginPage} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}

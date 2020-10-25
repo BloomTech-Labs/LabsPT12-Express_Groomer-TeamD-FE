@@ -1,9 +1,9 @@
 # Express Groomer
-\
+
 [Homepage](https://main.d3jas6g6byv0f1.amplifyapp.com/)
-\
+
 Demonstrating mastery over:
-\
+
 * HTML
 * Box Model/Flexbox
 * Advanced CSS/LESS
@@ -14,13 +14,17 @@ Demonstrating mastery over:
 * Responsive Design
 * Collaborative Production
 By building a React web app for Express Groomer
-\
+
 ## Developers
-\
+
 Candace Wilson/ [Github](https://github.com/candaceyw)
+
 Sheila Moore/ [Github](https://github.com/sherexmykes)
+
 Angela Williams/ [Github](https://www.github.com/techgawd)
+
 Anthony Hernandez/ [Github](https://github.com/asvka/)
+
 Fnu Milat/ [Github](https://github.com/fnumilat)
 
 ## Requirements
