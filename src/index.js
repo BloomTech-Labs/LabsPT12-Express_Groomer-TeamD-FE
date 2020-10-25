@@ -44,6 +44,7 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
         <Route exact path="/" component={LandingPage} />
+        <Route path="/login" component={LoginPage} />
         <Route exact path="/GroomerDash" component={DashBoard} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}
