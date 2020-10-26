@@ -24,11 +24,20 @@ import { Dashboard } from './components/userDash/index';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import rootReducer from './store/reducers/reducers';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
 ReactDOM.render(
   <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
   </Router>,
   document.getElementById('root')
 );
@@ -50,7 +59,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/userDash" component={Dashboard} />
         <Route path="/login" component={LoginPage} />
-        <Route exact path="/GroomerDash" component={DashBoard} />
+        <Route exact path="/GroomerDash" component={GroomerDashBoard} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}
         <SecureRoute

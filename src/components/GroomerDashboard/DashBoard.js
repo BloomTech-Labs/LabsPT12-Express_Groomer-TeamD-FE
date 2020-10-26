@@ -5,7 +5,7 @@ import { Card } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
-const { Meta } = Card;
+// const { Meta } = Card;
 
 function GroomerDashBoard() {
   return (
