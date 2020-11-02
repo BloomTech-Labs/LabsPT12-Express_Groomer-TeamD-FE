@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import GroomerCards from '../GroomerCards/GroomerCards';
 import { useParams } from 'react-router-dom';
+import './search-styles.scss';
+
 import axios from 'axios';
 
 function Search() {
@@ -52,6 +54,10 @@ function Search() {
           search={search}
           handleSubmit={getSearch}
         />
+        <i id="landing" className="fas fa-caret-left"></i>
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
       </form>
 
       <GroomerCards key={id} location={groomers.location_state} />

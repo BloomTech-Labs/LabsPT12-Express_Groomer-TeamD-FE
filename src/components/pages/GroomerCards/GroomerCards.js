@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getGroomers } from '../../../api';
 import { Card } from 'antd';
+import './groomerCard-styles.scss';
 
 function GroomerCards() {
   const [data, setData] = useState([]);
@@ -14,14 +15,15 @@ function GroomerCards() {
   }, []);
 
   return (
-    <div>
-      <h1>Groomers</h1>
+    <div className="groomerWrapper">
       {data.map(e => (
-        <Card title={e.business_name} bordered={false} style={{ width: 300 }}>
+        <Card className="groomerCard" bordered={false}>
+          <h1>{e.business_name}</h1>
           <img className="groomer-img" src={e.profile_picture} alt="groomers" />
+          <h2> Location: </h2>
           <p>State: {e.location_state}</p>
-          <p>Card content</p>
-          <p>Card content</p>
+          <p>City: {e.location_city}</p>
+          <p>Zip: {e.location_zip}</p>
         </Card>
       ))}
     </div>
