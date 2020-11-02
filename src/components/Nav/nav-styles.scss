@@ -3,11 +3,18 @@
   display: flex;
   align-items: center;
   height: 110px;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  z-index: 10000;
 
   .logo {
-    width: 20%;
+    width: 15%;
 
     margin: 5%;
+    @media (max-width: 750px) {
+      width: 30%;
+    }
   }
   .nav-links {
     position: absolute;
@@ -15,16 +22,16 @@
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    top: 7%;
+    top: 50%;
 
     a {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 0% 3%;
       color: #3a3a3a;
       border: 2px solid white;
     }
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 0% 3%;
       color: #3a3a3a;
       border: 2px solid white;
@@ -35,9 +42,75 @@
     p:hover {
       border-bottom: 2px solid #ba3c15;
     }
+
+    @media (max-width: 750px) {
+      display: none;
+      p {
+        cursor: pointer;
+      }
+    }
   }
 }
 
 .sign-in-widget {
   margin-top: -20%;
+}
+.menu-button {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+
+  @media (max-width: 750px) {
+    display: flex;
+    position: relative;
+    left: 45%;
+    z-index: 10000;
+    font-size: 30px;
+    cursor: pointer;
+    color: #777;
+
+    .fas.fa-bars {
+      color: black;
+      z-index: 10000;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .nav.show {
+    // top: 105px;
+    position: absolute;
+    width: 100vw;
+    height: 250vw;
+    background-color: rgba(0, 102, 191, 0.75);
+    z-index: 9000;
+  }
+}
+
+ul.menu-items {
+  // display: none;
+
+  @media (max-width: 750px) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 545px;
+  }
+}
+@media (max-width: 750px) {
+  .menu-link {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    justify-content: center;
+    display: flex;
+    padding: 25px 16px;
+  }
+
+  a.menu-link:hover {
+    color: white;
+  }
 }
