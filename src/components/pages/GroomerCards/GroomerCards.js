@@ -19,7 +19,7 @@ function GroomerCards() {
       {data.map(e => (
         <Card title={e.business_name} bordered={false} style={{ width: 300 }}>
           <img className="groomer-img" src={e.profile_picture} alt="groomers" />
-          <p>Card content</p>
+          <p>State: {e.location_state}</p>
           <p>Card content</p>
           <p>Card content</p>
         </Card>
