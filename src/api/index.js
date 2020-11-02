@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // we will define a bunch of API calls here.
-const apiUrl = `${process.env.REACT_APP_API_URI}/profiles`;
+const apiUrl = `${process.env.REACT_APP_API_URI}`;
 
 const sleep = time =>
   new Promise(resolve => {
@@ -36,6 +36,7 @@ const getDSData = (url, authState) => {
 
 const apiAuthGet = authHeader => {
   return axios.get(apiUrl, { headers: authHeader });
+  // return axios.get(`${apiUrl}/groomer_profiles`);
 };
 
 const getProfileData = authState => {
@@ -49,4 +50,15 @@ const getProfileData = authState => {
   }
 };
 
-export { sleep, getExampleData, getProfileData, getDSData };
+const getGroomers = () => {
+  return axios.get(`${apiUrl}/groomer_profile`);
+};
+
+export {
+  sleep,
+  getExampleData,
+  getProfileData,
+  getDSData,
+  apiAuthGet,
+  getGroomers,
+};
