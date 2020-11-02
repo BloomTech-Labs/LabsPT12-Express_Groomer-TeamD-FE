@@ -1,7 +1,7 @@
 import React from 'react';
 import './groomerdash-styles.scss';
 import { Layout, Breadcrumb, Menu, Avatar } from 'antd';
-import { Card } from 'antd';
+// import { Card } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
