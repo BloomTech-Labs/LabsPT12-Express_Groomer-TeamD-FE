@@ -38,21 +38,6 @@ function Footer() {
         <a href="#about">About</a> |<a href="#testimonial">Testimonials</a> |
         <p onClick={showModal}>Login</p>
       </div>
-      <div className="mobileFooter">
-        <div className="mobileSection1">
-          <i className="fab fa-facebook-square"></i>
-          <i className="fab fa-instagram"></i>
-          <i className="fab fa-twitter"></i>
-          <i className="fab fa-youtube-square"></i>
-        </div>
-        <div className="mobileSection2">
-          <a href="#about">About</a> |<a href="#testimonial">Testimonials</a> |
-          <p onClick={showModal}>Login</p>
-        </div>
-        <div className="mobileSection3">
-          <img className="logoRev" src={logoRev} alt="logoRev" />
-        </div>
-      </div>
 
       <Modal visible={visible} onOk={handleOk} onCancel={handleCancel}>
         <LoginPage />
