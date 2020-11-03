@@ -1,41 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import GroomerCards from '../GroomerCards/GroomerCards';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import { getGroomers } from '../../../api';
+import './search-styles.scss';
 
 function Search() {
   const { id } = useParams();
-  const [groomers, setGroomers] = useState([]);
 
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
 
-  let url = `${process.env.REACT_APP_API_URI}/groomer_profile/?location=${query}`;
+  const [data, setData] = useState([]);
 
+  const fetchdata = async () => {
+    const groomers = await getGroomers({ location_city: search });
+    console.log(groomers);
+    setData(groomers.data);
+  };
   useEffect(() => {
-    axios
-      .get(url)
-      .then(response => {
-        setGroomers([...response.data]);
-      })
-
-      .catch(err => console.log(err));
-  }, [url]);
+    fetchdata();
+  }, [search]);
 
   const updateSearch = e => {
     e.preventDefault();
     setQuery(e.target.value);
     console.log(query);
-    const getGroomers = groomers.filter(e =>
-      e.location_state.toLowerCase().includes(query.toLowerCase())
-    );
-    setGroomers(getGroomers);
   };
 
   const getSearch = e => {
     e.preventDefault();
     setQuery(query);
-    setSearch('');
+    setSearch(query);
     console.log(query);
   };
 
@@ -52,9 +47,13 @@ function Search() {
           search={search}
           handleSubmit={getSearch}
         />
+        <i id="landing" className="fas fa-caret-left"></i>
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
       </form>
 
-      <GroomerCards key={id} location={groomers.location_state} />
+      <GroomerCards key={id} groomers={data} />
     </div>
   );
 }
