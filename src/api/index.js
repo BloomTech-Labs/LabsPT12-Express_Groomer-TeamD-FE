@@ -50,8 +50,12 @@ const getProfileData = authState => {
   }
 };
 
-const getGroomers = () => {
-  return axios.get(`${apiUrl}/groomer_profile`);
+const getGroomers = queries => {
+  let url = `${apiUrl}/groomer_profile`;
+  if (queries?.location_city) {
+    url = url + `?location_city=${queries.location_city}`;
+  }
+  return axios.get(url);
 };
 
 export {
