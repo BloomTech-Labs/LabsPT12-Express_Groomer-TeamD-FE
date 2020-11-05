@@ -29,6 +29,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './store/reducers/reducers';
+import RedirectToDashboard from './components/pages/Login/RedirectToDashboard';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -58,17 +59,13 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/userDash" component={Dashboard} />
+        <SecureRoute exact path="/userDash" component={Dashboard} />
         <Route path="/login" component={LoginPage} />
         <Route path="/search" component={Search} />
-        <Route exact path="/GroomerDash" component={GroomerDashBoard} />
+        <SecureRoute exact path="/GroomerDash" component={GroomerDashBoard} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}
-        <SecureRoute
-          path="/"
-          exact
-          component={() => <HomePage LoadingComponent={LoadingComponent} />}
-        />
+        <Route path="/dashboard" exact component={RedirectToDashboard} />
         <SecureRoute path="/example-list" component={ExampleListPage} />
 
         <SecureRoute path="/profile-list" component={ProfileListPage} />
