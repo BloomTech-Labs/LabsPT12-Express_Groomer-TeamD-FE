@@ -39,9 +39,12 @@ const apiAuthGet = authHeader => {
   // return axios.get(`${apiUrl}/groomer_profiles`);
 };
 
-const getProfileData = authState => {
+const getProfileData = (authState, id) => {
   try {
-    return apiAuthGet(getAuthHeader(authState)).then(response => response.data);
+    const headers = getAuthHeader(authState, id);
+    return axios
+      .get(`${apiUrl}/profiles/${id}`, { headers })
+      .then(res => res.data);
   } catch (error) {
     return new Promise(() => {
       console.log(error);

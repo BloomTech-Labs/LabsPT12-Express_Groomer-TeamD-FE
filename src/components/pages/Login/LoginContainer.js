@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
+import { useOktaAuth } from '@okta/okta-react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 
 import { config } from '../../../utils/oktaConfig';
 
 const LoginContainer = () => {
+  const { authService } = useOktaAuth();
+  authService.setFromUri('/dashboard');
   useEffect(() => {
     const { pkce, issuer, clientId, redirectUri, scopes } = config;
     // destructure your config so that you can pass it into the required fields in your widget.
