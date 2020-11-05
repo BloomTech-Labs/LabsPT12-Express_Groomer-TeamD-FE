@@ -57,6 +57,20 @@ const getGroomers = () => {
   return axios.get(`${apiUrl}/groomer_profile`);
 };
 
+const getGroomerBusinessData = (authState, id) => {
+  try {
+    const headers = getAuthHeader(authState, id);
+    return axios
+      .get(`${apiUrl}/groomer_profiles/${id}`, { headers })
+      .then(res => res.data);
+  } catch (error) {
+    return new Promise(() => {
+      console.log(error);
+      return [];
+    });
+  }
+};
+
 export {
   sleep,
   getExampleData,
@@ -64,4 +78,5 @@ export {
   getDSData,
   apiAuthGet,
   getGroomers,
+  getGroomerBusinessData,
 };

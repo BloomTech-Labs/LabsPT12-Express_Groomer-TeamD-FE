@@ -14,6 +14,7 @@ function RedirectToDashboard() {
       authService.getUser().then(info => {
         console.log(info);
         getProfileData(authState, info.sub).then(res => {
+          console.log(res);
           setUser(res);
           if (res.is_groomer) setPath('/GroomerDash');
           else setPath('/userDash');
