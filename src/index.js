@@ -13,7 +13,6 @@ import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { ExampleListPage } from './components/pages/ExampleList';
 import { LandingPage } from './components/pages/Landing';
-import { HomePage } from './components/pages/Home';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
 import { Search } from './components/pages/search';
@@ -23,7 +22,6 @@ import { GroomerDashBoard } from './components/GroomerDashboard/index';
 import { Dashboard } from './components/userDash/index';
 
 import { config } from './utils/oktaConfig';
-import { LoadingComponent } from './components/common';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
