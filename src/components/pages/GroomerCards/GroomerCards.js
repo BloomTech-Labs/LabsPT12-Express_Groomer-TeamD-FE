@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { getGroomers } from '../../../api';
+import React from 'react';
 import { Card } from 'antd';
 import './groomerCard-styles.scss';
 
