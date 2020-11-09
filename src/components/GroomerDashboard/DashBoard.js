@@ -2,6 +2,7 @@ import React from 'react';
 import './groomerdash-styles.scss';
 import { Layout, Breadcrumb, Menu, Avatar } from 'antd';
 // import { Card } from 'antd';
+import { Calendar } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -38,16 +39,12 @@ function GroomerDashBoard() {
               <SubMenu title={<span>Clients</span>}>
                 <Menu.ItemGroup key="clients" title="">
                   <Menu.Item key="clientlist">Client List</Menu.Item>
-                  <Menu.Item key="sales">New Sales</Menu.Item>
-                  <Menu.Item key="newtasks">New Tasks</Menu.Item>
-                  <Menu.Item key="completedtasks">Completed Tasks</Menu.Item>
                   <Menu.Item key="clientreviews">Client Reviews</Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
               <SubMenu title={<span>Profile Settings</span>}>
                 <Menu.ItemGroup key="business" title="">
                   <Menu.Item key="services">Services</Menu.Item>
-                  <Menu.Item key="location">Location</Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
             </Menu>
@@ -55,7 +52,8 @@ function GroomerDashBoard() {
           <Layout>
             <Content style={{ padding: '0 50px' }}>
               <Breadcrumb style={{ margin: '16px 0' }}></Breadcrumb>
-              <h1>Recent Clients</h1>
+              <h1>Appointment Calander</h1>
+              <Calendar />
               <div
                 style={{
                   background: '#fff',

@@ -7,6 +7,8 @@ function RedirectToDashboard() {
   const { authState, authService } = useOktaAuth();
   const [path, setPath] = useState('');
   const [user, setUser] = useState(null);
+  console.log(user);
+
   useEffect(() => {
     if (!authState.isAuthenticated) {
       setUser(null);

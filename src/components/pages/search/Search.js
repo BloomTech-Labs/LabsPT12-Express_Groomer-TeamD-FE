@@ -12,12 +12,13 @@ function Search() {
 
   const [data, setData] = useState([]);
 
-  const fetchdata = async () => {
-    const groomers = await getGroomers({ location_city: search });
-    console.log(groomers);
-    setData(groomers.data);
-  };
   useEffect(() => {
+    const fetchdata = async () => {
+      const groomers = await getGroomers({ location_city: search });
+      console.log(groomers);
+      setData(groomers.data);
+    };
+
     fetchdata();
   }, [search]);
 
