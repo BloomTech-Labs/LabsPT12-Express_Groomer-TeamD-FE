@@ -1,4 +1,4 @@
-import React, from 'react';
+import React from 'react';
 //import { getGroomers } from '../../../api';
 import { Card } from 'antd';
 import './groomerCard-styles.scss';
