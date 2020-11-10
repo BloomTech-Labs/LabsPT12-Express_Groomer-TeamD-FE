@@ -16,6 +16,7 @@ import { LandingPage } from './components/pages/Landing';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
 import { Search } from './components/pages/search';
+import { Map, SearchableMap } from './components/pages/Maps';
 
 import { GroomerDashBoard } from './components/GroomerDashboard/index';
 
@@ -60,6 +61,8 @@ function App() {
         <SecureRoute exact path="/userDash" component={Dashboard} />
         <Route path="/login" component={LoginPage} />
         <Route path="/search" component={Search} />
+        <Route exact path="/map" component={Map} />
+        <Route exact path="/map-search" component={SearchableMap} />
         <SecureRoute exact path="/GroomerDash" component={GroomerDashBoard} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}
