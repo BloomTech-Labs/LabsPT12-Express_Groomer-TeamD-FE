@@ -4,13 +4,11 @@ import { Avatar } from 'antd';
 import { Menu } from 'antd';
 import './dashboard-styles.scss';
 // import '../../assets/dogLogo.png';
-import { Card } from 'antd';
 // import Search from '../pages/search/Search';
 import PetUpload from './PetUpload';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
-const { Meta } = Card;
 
 function Dashboard() {
   return (
