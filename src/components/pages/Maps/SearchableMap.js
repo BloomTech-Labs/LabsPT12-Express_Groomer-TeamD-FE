@@ -56,6 +56,7 @@ class SearchableMap extends Component {
     console.log('marker', this.props.marker);
 
     const { showPopup } = this.state;
+    console.log('show popup', showPopup);
 
     return (
       <div style={{ height: '85vh', width: '100vw' }}>
@@ -77,6 +78,7 @@ class SearchableMap extends Component {
                     e.preventDefault();
                     this.setState({
                       searchResultLayer: marker,
+                      showPopup: true,
                     });
                   }}
                 >
