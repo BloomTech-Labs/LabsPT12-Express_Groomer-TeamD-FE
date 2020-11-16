@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import { ServiceCheckBox } from './ServiceCheckBox';
 import { PicUpload } from './Uploadpic';
-
+import UserProfile from './UserProfile';
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
@@ -104,7 +104,7 @@ function GroomerDashBoard() {
             <Content style={{ padding: '0 100px' }}>
               <Breadcrumb style={{ margin: '12px 0' }}></Breadcrumb>
               <h1>Appointment Calander</h1>
-
+              <UserProfile />
               <Calendar />
               <div
                 style={{
