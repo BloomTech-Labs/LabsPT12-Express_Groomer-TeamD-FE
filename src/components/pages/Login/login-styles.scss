@@ -1,0 +1,17 @@
+button.ant-btn:first-child {
+  display: none;
+}
+
+button.ant-btn {
+  width: 50%;
+  background-color: #9dd4e3;
+  border: 1px solid #9dd4e3;
+}
+
+.ant-modal-close {
+  display: none;
+}
+
+#sign-in-widget {
+  margin-top: -95px;
+}
