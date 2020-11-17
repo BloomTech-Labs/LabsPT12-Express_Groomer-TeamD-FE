@@ -4,16 +4,16 @@
 
 Demonstrating mastery over:
 
-* HTML
-* Box Model/Flexbox
-* Advanced CSS/LESS
-* JavaScript
-* Objects, Components, Arrays
-* DOM Manipulation, Event Listeners
-* Git Flow
-* Responsive Design
-* Collaborative Production
-By building a React web app for Express Groomer
+- HTML
+- Box Model/Flexbox
+- Advanced CSS/LESS
+- JavaScript
+- Objects, Components, Arrays
+- DOM Manipulation, Event Listeners
+- Git Flow
+- Responsive Design
+- Collaborative Production
+  By building a React web app for Express Groomer
 
 ## Developers
 

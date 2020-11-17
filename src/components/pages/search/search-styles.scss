@@ -30,15 +30,52 @@ button {
 .search-container {
   display: flex;
   width: 100%;
+  height: 85vh;
+
   margin: auto;
-  top: 0;
+  top: 15%;
 }
 
 .groomers-right {
   width: 50%;
+  overflow: scroll;
+  height: 85vh;
 }
 
-.map-left {
-  width: 60%;
-  // margin-right: 2%;
+.marker-btn {
+  background-color: transparent;
+}
+
+.business-heading {
+  color: #ba3c15;
+}
+
+.mapboxgl-popup-content {
+  width: 120%;
+}
+
+.MuiTypography-root.business-heading.MuiTypography-body1.MuiTypography-alignCenter {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 3%;
+}
+
+.marker-results {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    text-align: center;
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+  background-color: #9dd4e3;
+  width: 100%;
+  display: table-row;
 }
