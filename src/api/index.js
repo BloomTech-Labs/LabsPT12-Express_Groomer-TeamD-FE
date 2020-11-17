@@ -57,6 +57,11 @@ const getGroomers = queries => {
   let url = `${apiUrl}/groomer_profile`;
   if (queries?.location_city) {
     url = url + `?location_city=${queries.location_city}`;
+    // url = url + `?latitude=${queries.lat}&longitude=${queries.lng}`;
+  }
+  if (queries?.location_state) {
+    url = url + `?location_state=${queries.location_state}`;
+    // url = url + `?latitude=${queries.lat}&longitude=${queries.lng}`;
   }
   return axios.get(url);
 };
