@@ -2,7 +2,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-import { GeoJsonLayer } from 'deck.gl';
+// import { GeoJsonLayer } from 'deck.gl';
 import Geocoder from 'react-map-gl-geocoder';
 import EGmarker from '../../../assets/EGmarker.png';
 import { Button, Card, Typography } from '@material-ui/core';
@@ -29,9 +29,19 @@ class SearchableMap extends Component {
     console.log('viewport', viewport);
   };
   // if you are happy with Geocoder default settings, you can just use handleViewportChange directly
-  handleGeocoderViewportChange = viewport => {
+  handleGeocoderViewportChange = async viewport => {
+    const conversion = 200;
+    const radius = conversion * (13.223 - viewport.zoom);
     const geocoderDefaultOverrides = { transitionDuration: 1000 };
-
+    console.log('viewport', viewport);
+    await this.props.fetchGroomers({
+      width: 1300,
+      height: 600,
+      lat: viewport.latitude,
+      lng: viewport.longitude,
+      radius,
+    });
+    console.log('ZOOM', viewport.zoom);
     return this.handleViewportChange({
       ...viewport,
       ...geocoderDefaultOverrides,
@@ -39,24 +49,24 @@ class SearchableMap extends Component {
   };
 
   handleOnResult = event => {
-    this.setState({
-      searchResultLayer: new GeoJsonLayer({
-        id: 'search-result',
-        data: event.result.geometry,
-        getFillColor: [255, 0, 0, 128],
-        getRadius: 1000,
-        pointRadiusMinPixels: 10,
-        pointRadiusMaxPixels: 10,
-      }),
-    });
+    // this.setState({
+    //   searchResultLayer: new GeoJsonLayer({
+    //     id: 'search-result',
+    //     data: event.result.geometry,
+    //     getFillColor: [255, 0, 0, 128],
+    //     getRadius: 1000,
+    //     pointRadiusMinPixels: 10,
+    //     pointRadiusMaxPixels: 10,
+    //   }),
+    // });
   };
 
   render() {
-    const { viewport, searchResultLayer } = this.state;
+    const { viewport } = this.state;
     console.log('marker', this.props.marker);
 
     const { showPopup } = this.state;
-    console.log('show popup', showPopup);
+    console.log('state', this.state);
 
     return (
       <div style={{ height: '85vh', width: '100vw' }}>
@@ -71,7 +81,13 @@ class SearchableMap extends Component {
         >
           {this.props.marker.map(marker => {
             return (
-              <Marker latitude={marker.latitude} longitude={marker.longitude}>
+              <Marker
+                anchor={'top'}
+                latitude={marker.latitude}
+                longitude={marker.longitude}
+
+                // offsetLeft={200}
+              >
                 <button
                   className="marker-btn"
                   onClick={e => {
@@ -94,8 +110,8 @@ class SearchableMap extends Component {
                 <Popup
                   latitude={this.state.searchResultLayer.latitude}
                   longitude={this.state.searchResultLayer.longitude}
-                  closeButton={true}
-                  closeOnClick={false}
+                  // closeButton={true}
+                  // closeOnClick={false}
                   onClose={() => this.setState({ showPopup: false })}
                   anchor="top"
                 >
