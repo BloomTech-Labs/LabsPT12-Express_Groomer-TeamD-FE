@@ -8,7 +8,8 @@ function onPanelChange(value, mode) {
 
 ReactDOM.render(
   <div className="appointment-card">
-    <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+    <Calendar fullscreen={true} onPanelChange={onPanelChange} />
+    date()
   </div>
 );
 
